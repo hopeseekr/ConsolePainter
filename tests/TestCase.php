@@ -3,7 +3,7 @@
 /**
  * This file is part of Console Painter, a PHP Experts, Inc., Project.
  *
- * Copyright © 2019-2021 PHP Experts, Inc.
+ * Copyright © 2021-2025 PHP Experts, Inc.
  * Author: Theodore R. Smith <theodore@phpexperts.pro>
  *   GPG Fingerprint: 4BF8 2613 1C34 87AC D28F  2AD8 EB24 A91D D612 5690
  *   https://www.phpexperts.pro/
@@ -21,8 +21,6 @@ abstract class TestCase extends BaseTestCase
     /**
      * Checks if phpunit was togged in debug mode o rnot.
      * See https://stackoverflow.com/a/12612733/430062.
-     *
-     * @return bool
      */
     public static function isDebugOn(): bool
     {
