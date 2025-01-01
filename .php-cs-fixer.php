@@ -3,7 +3,7 @@
 $header = <<<HEADER
 This file is part of Console Painter, a PHP Experts, Inc., Project.
 
-Copyright © 2019-2021 PHP Experts, Inc.
+Copyright © 2021-2025 PHP Experts, Inc.
 Author: Theodore R. Smith <theodore@phpexperts.pro>
   GPG Fingerprint: 4BF8 2613 1C34 87AC D28F  2AD8 EB24 A91D D612 5690
   https://www.phpexperts.pro/
@@ -12,16 +12,19 @@ Author: Theodore R. Smith <theodore@phpexperts.pro>
 This file is licensed under the MIT License.
 HEADER;
 
-return PhpCsFixer\Config::create()
+return (new PhpCsFixer\Config())
     ->setRules([
         '@Symfony'       => true,
         'elseif'         => false,
         'yoda_style'     => false,
         'list_syntax'    => ['syntax'  => 'short'],
         'concat_space'   => ['spacing' => 'one'],
-        'binary_operator_spaces' => array(
-            'align_double_arrow' => true,
-        ),
+        'binary_operator_spaces' => [
+            'operators' => [
+                '='  => 'align',
+                '=>' => 'align',
+            ],
+        ],
         'phpdoc_no_alias_tag'          => false,
         'declare_strict_types'         => true,
         'no_superfluous_elseif'        => true,
